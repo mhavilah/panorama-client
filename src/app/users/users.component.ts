@@ -8,9 +8,14 @@ import { User } from '../user';
 })
 export class UsersComponent implements OnInit {
 
+  selectedUser?:User;
+
   constructor() { }
 
   ngOnInit(): void {  
   }
 
+  onSelect(user:User) : void {
+    this.selectedUser = user;
+  }
 }
