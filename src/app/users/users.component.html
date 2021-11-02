@@ -1,3 +1,17 @@
 <h2>{{user.name|uppercase}} Details</h2>
 <div><span>id:</span>{{user.id}}</div>
 <div><span>name:</span>{{user.name}}</div>
+
+<h2>Users from Array</h2>
+
+<div *ngFor="let u of users ">
+    {{u}}
+</div>
+
+<h2>Users from File</h2>
+
+<div *ngFor="let u of ('assets/users.json' | fetch) ">
+    {{u.name}}
+</div>
+
+<hr/>
