@@ -7,13 +7,16 @@ import { AppComponent } from './app.component';
 import { UsersComponent } from './users/users.component';
 
 import { FetchJsonPipe } from './fetch-json.pipe';
-
+import { GetFirstWordPipe } from './firstWord.pipe';
+import { CleanseTitlesPipe } from './cleanseTitles.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     UsersComponent,
-    FetchJsonPipe
+    FetchJsonPipe,
+    GetFirstWordPipe,
+    CleanseTitlesPipe
   ],
   imports: [
     BrowserModule,
