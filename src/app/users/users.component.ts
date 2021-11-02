@@ -15,7 +15,7 @@ export class UsersComponent implements OnInit {
   ngOnInit(): void {  
   }
 
-  onSelect(user:User) : void {
-    this.selectedUser = user;
+  onSelect(user:User): void {
+    this.selectedUser =  user;
   }
 }

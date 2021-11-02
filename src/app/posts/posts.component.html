@@ -1,0 +1,16 @@
+<div *ngIf="user">
+    <h2>Posts from {{user.name}}:</h2>
+    <div class="table">
+        <ul class="posts">
+            <li *ngFor="let post of ('assets/posts.json' | fetch) " [class.selected]="post === selectedPost"
+                (click)="onSelect(post)">
+                <div class="table"><span class="post-title">{{post.title}}</span></div>
+                <div><span class="post-body">Body {{post.body}}</span></div>
+            </li>
+        </ul>
+    </div>
+
+    <div *ngIf="!isAllLoaded">
+        <button (click)="onLoadAll(user)">...Load All</button>
+    </div>
+</div>

@@ -1,0 +1,83 @@
+/* UsersComponent's private CSS styles */
+
+// Common styles
+// https://css-tricks.com/centering-list-items-horizontally-slightly-trickier-than-you-might-think/ 
+.table {
+	display: table;   /* Allow the centering to work */
+	margin: 0 auto;
+}
+
+.posts {
+  margin: 0 0 2em 0;
+  list-style-type: none;
+  padding: 0;
+}
+.posts li {
+  cursor: pointer;
+  position: relative;
+  left: 0;
+  background-color: #EEE;
+  margin: .5em;
+  padding: .3em 0;
+//   height: 1.8em;
+  border-radius: 4px;
+  display: block;
+}
+.users li:hover {
+  color: #2c3a41;
+  background-color: #e6e6e6;
+  left: .1em;
+}
+.posts li.selected {
+  background-color: black;
+  color: white;
+}
+.posts li.selected:hover {
+  background-color: #505050;
+  color: white;
+}
+.posts li.selected:active {
+  background-color: black;
+  color: white;
+}
+
+.posts .post-title {
+    color: blue;
+    width: 100%;
+    font-size: large;
+    padding: .1em;
+    display: inline-block;
+}
+
+.posts .post-title:first-letter {
+    text-transform: capitalize;
+}
+
+.posts .post-body {
+    display: table;
+    color: gray;
+    margin: 0 auto;
+    width: 100%;
+    font-size: small;
+    padding: .1em;
+}
+
+.posts .badge {
+//    display: none;
+ display: inline-block;
+  font-size: small;
+  color: white;
+  padding: 0.8em 0.7em 0 0.7em;
+  background-color:#405061;
+  line-height: 1em;
+  position: relative;
+  left: -1px;
+  top: 1px;
+  height: 1.4em;
+  margin-right: .8em;
+  border-radius: 4px 0 0 4px;
+}
+
+input {
+  padding: .5rem;
+}
