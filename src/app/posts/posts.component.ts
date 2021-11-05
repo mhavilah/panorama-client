@@ -1,6 +1,8 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, SimpleChanges } from '@angular/core';
 import { User } from '../user';
 import { Post } from '../post';
+import { PostService } from '../post.service'
+import { of, Observable } from 'rxjs';
 
 @Component({
   selector: 'app-posts',
@@ -11,12 +13,38 @@ import { Post } from '../post';
 export class PostsComponent implements OnInit {
   @Input() user?: User;
 
+  posts$: Observable<Post[]> = of([]);
+
   selectedPost?: Post;
   isAllLoaded:boolean = false;
-  
-  constructor() { }
+  isShowPostComments = false;
+
+  constructor(private postService: PostService) { }
 
   ngOnInit(): void {
+      this.getPosts();
+  }
+
+  ngOnChanges(changes: SimpleChanges) {
+
+    this.getPosts(); 
+    // (changes.categoryId.currentValue);
+    // You can also use categoryId.previousValue and 
+    // categoryId.firstChange for comparing old and new values
+
+    // Reset other state
+    this.isShowPostComments = false;
+
+  }
+
+  getPosts(): void {
+    if (this.user) {
+      console.log(`Getting posts for user: ${this.user.name}`);
+      this.posts$ = this.postService.getPosts(this.user);
+    }
+    else {
+      console.log("PostsComponent: No user selected yet");
+    }
   }
 
   onLoadAll(user: User): void {
@@ -26,5 +54,12 @@ export class PostsComponent implements OnInit {
 
   onSelect(post: Post): void {
     this.selectedPost = post;
+  }
+
+  showComments(post: Post): void {
+    
+    this.isShowPostComments = !this.isShowPostComments;
+    console.log(`PostsComponent: Show comments is: ${this.isShowPostComments}`);
+
   }
 }

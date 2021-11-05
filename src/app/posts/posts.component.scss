@@ -58,8 +58,13 @@
     color: gray;
     margin: 0 auto;
     width: 100%;
+    min-height: 4em;
     font-size: small;
     padding: .1em;
+}
+
+.posts .post-body:first-letter {
+    text-transform: capitalize;
 }
 
 .posts .badge {

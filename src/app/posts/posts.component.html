@@ -1,14 +1,23 @@
 <div *ngIf="user">
     <h2>Posts from {{user.name}}:</h2>
-    <div class="table">
+    <div class="table" *ngIf="(posts$| async) as posts; else loading">
         <ul class="posts">
-            <li *ngFor="let post of ('assets/posts.json' | fetch) " [class.selected]="post === selectedPost"
+            <li *ngFor="let post of posts" [class.selected]="post === selectedPost"
                 (click)="onSelect(post)">
-                <div class="table"><span class="post-title">{{post.title}}</span></div>
-                <div><span class="post-body">Body {{post.body}}</span></div>
+                <div style="width:75%;min-height:2em;display:inline-block;margin:0 10">
+                    <div class="table"><span class="post-title">{{post.title}}</span></div>
+                    <div><span class="post-body">{{post.body}}</span></div>
+                </div>
+                <div style="width:20%;display:inline-block;">
+                    <button (click)="showComments(post)" style="width:4em;height:4em;display:inline-block;">+</button>
+                </div>
             </li>
         </ul>
     </div>
+    <ng-template #loading>
+        <p>No posts...waiting for API</p>
+        <!-- loading-component></loading-component -->
+    </ng-template>
 
     <div *ngIf="!isAllLoaded">
         <button (click)="onLoadAll(user)">...Load All</button>

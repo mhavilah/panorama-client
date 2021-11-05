@@ -1,13 +1,17 @@
 <h2>Please select a user to find their posts:</h2>
 
 <div class="table">
-    <ul class="users">
-        <li *ngFor="let user of ('assets/users.json' | fetch) " [class.selected]="user === selectedUser"
+    <ul class="users" *ngIf="(users$|async) as users; else loading">
+        <li *ngFor="let user of users" [class.selected]="user === selectedUser"
             (click)="onSelect(user)">
             <span class="badge">{{user.id}}</span> {{user.name | cleanseTitles | firstWord}}
         </li>
     </ul>
 </div>
+<ng-template #loading>
+    <p>Waiting for Users...</p>
+    <!--loading-component></loading-component-->
+</ng-template>
 
 <hr />
 
