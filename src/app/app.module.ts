@@ -7,20 +7,18 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { UsersComponent } from './users/users.component';
 
-import { FetchJsonPipe } from './fetch-json.pipe';
 import { GetFirstWordPipe } from './firstWord.pipe';
 import { CleanseTitlesPipe } from './cleanseTitles.pipe';
 import { PostsComponent } from './posts/posts.component';
 import { CommentsComponent } from './comments/comments.component';
 
-import { LoadingDirective } from "./loading/loading-directive/loading.directive";
-import { LoadingSpinnerComponent } from "./loading/loading-spinner/loading-spinner.component";
+import { LoadingDirective } from './loading/loading-directive/loading.directive';
+import { LoadingSpinnerComponent } from './loading/loading-spinner/loading-spinner.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     UsersComponent,
-    FetchJsonPipe,
     GetFirstWordPipe,
     CleanseTitlesPipe,
     PostsComponent,
