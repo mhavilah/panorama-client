@@ -18,31 +18,14 @@
   left: 0;
   background-color: #EEE;
   margin: .5em;
-  padding: .3em 0;
+  padding: 1em;
 //   height: 1.8em;
   border-radius: 4px;
   display: block;
 }
-.posts li:hover {
-  color: #2c3a41;
-  background-color: #e6e6e6;
-  left: .1em;
-}
-.posts li.selected {
-  background-color: black;
-  color: white;
-}
-.posts li.selected:hover {
-  background-color: #505050;
-  color: white;
-}
-.posts li.selected:active {
-  background-color: black;
-  color: white;
-}
 
 .posts .post-title {
-    color: blue;
+    color: #405061;
     width: 100%;
     font-size: large;
     padding: .1em;
@@ -59,30 +42,38 @@
     margin: 0 auto;
     width: 100%;
     min-height: 4em;
-    font-size: small;
+    font-size: medium;
     padding: .1em;
+}
+
+.posts .post-item-container {
+  width:75%;
+  min-height:2em;
+  display:inline-block;
+  margin:0 10;
 }
 
 .posts .post-body:first-letter {
     text-transform: capitalize;
 }
 
-.posts .badge {
-//    display: none;
- display: inline-block;
-  font-size: small;
-  color: white;
-  padding: 0.8em 0.7em 0 0.7em;
-  background-color:#405061;
-  line-height: 1em;
-  position: relative;
-  left: -1px;
-  top: 1px;
-  height: 1.4em;
-  margin-right: .8em;
-  border-radius: 4px 0 0 4px;
+.posts .comments-button-container {
+  width:20%;
+  display:inline-block;
 }
 
-input {
-  padding: .5rem;
+.posts .comments-button-container button {
+  width:4em;
+  height:4em;
+  float:right;
+}
+
+.load-container button {
+  padding: 1em;
+  color: white;
+  background-color:#405061;
+  border-radius: 10px;
+  font-family: sans-serif;
+  float:right;
+  margin-right:6em;
 }

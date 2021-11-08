@@ -18,8 +18,7 @@ export class PostsComponent implements OnInit {
 
   selectedPost?: Post;
   isAllLoaded:boolean = false;
-  isShowPostComments = false;
-
+  
   constructor(private postService: PostService) { }
 
   ngOnInit(): void {
@@ -34,8 +33,7 @@ export class PostsComponent implements OnInit {
     // categoryId.firstChange for comparing old and new values
 
     // Reset other state
-    this.isShowPostComments = false;
-
+    // this.selectedPost = undefined;
   }
 
   ngOnDestroy() {
@@ -60,13 +58,10 @@ export class PostsComponent implements OnInit {
   }
 
   onSelect(post: Post): void {
-    this.selectedPost = post;
+    console.log(`PostComponent: Selected post: ${post.id}`);
+           
+    // Toggle selection
+    this.selectedPost = (this.selectedPost === post)? undefined : post;
   }
 
-  showComments(post: Post): void {
-    
-    this.isShowPostComments = !this.isShowPostComments;
-    console.log(`PostsComponent: Show comments is: ${this.isShowPostComments}`);
-
-  }
 }
