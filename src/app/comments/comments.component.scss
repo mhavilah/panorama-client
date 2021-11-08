@@ -55,7 +55,7 @@ h5 {
 }
 
 .comments .comment-body {
-    display: table;
+    display: inline-block;
     color: gray;
     background-color: white;
     margin: 0 auto;
@@ -68,7 +68,7 @@ h5 {
 }
 
 .comments .comment-body:first-letter {
-    text-transform: capitalize;
+    text-transform: capitalize;    
 }
 
 .comments .badge {

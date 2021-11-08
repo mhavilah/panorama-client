@@ -15,7 +15,10 @@
                 </div>
             </li>
         </ul>
-        <div class="load-container" *ngIf="!isAllLoaded">
+        <div *ngIf="(posts$|async)?.length == 0">
+            <p>This user has no posts yet.</p>
+        </div>
+        <div class="load-container">
             <button (click)="onLoadAll(user)">Load All</button>
         </div>
     </div>

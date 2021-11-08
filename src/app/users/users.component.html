@@ -7,6 +7,9 @@
             <span class="badge">{{user.id}}</span> {{user.name | cleanseTitles | firstWord}}
         </li>
     </ul>
+    <div *ngIf="(users$|async)?.length == 0">
+        <p>No users found.  Try reloading.</p>
+    </div>
 </div>
 <ng-template #loading>
     <p>Waiting for Users...</p>
