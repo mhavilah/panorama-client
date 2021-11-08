@@ -5,30 +5,73 @@ November 2021
 
 An Angular 12 Javascript SPA application for the BT Panorama code test.
 
-Used in conjunction with the usersAndPosts Java Spring Boot API server project.
+## Backend Project
+This client is used in conjunction with the usersAndPosts Java Spring Boot API server project.
+
+Visit:  [Panorama Server@Github](https://github.com/mhavilah/panorama-server)
 
 ## Prerequisites:
 - Node 14.x +
 - Angular-cli (ng tool)
 - nvm (optional)  
+- A modern browser (eg, [Chrome 95](https://www.google.com/intl/en_au/chrome/))
 
 ### Installation
+
+On MacOS the following steps will setup the development toolchain:
+
 ```
 $ brew install nvm
 # Install managed nodeJS 14 or newer
 $ nvm use 14
 Now using node v14.18.0 (npm v6.14.15)
 $ npm install -g @angular/cli
-$ ng help
 ```
 
+Verfiy the installation:
+```
+$ npm --version
+6.14.11
+$ node --version
+v14.16.0
+$ ng --version
+
+     _                      _                 ____ _     ___
+    / \   _ __   __ _ _   _| | __ _ _ __     / ___| |   |_ _|
+   / △ \ | '_ \ / _` | | | | |/ _` | '__|   | |   | |    | |
+  / ___ \| | | | (_| | |_| | | (_| | |      | |___| |___ | |
+ /_/   \_\_| |_|\__, |\__,_|_|\__,_|_|       \____|_____|___|
+                |___/
+    
+
+Angular CLI: 12.2.12
+Node: 14.16.0
+Package Manager: npm 6.14.11
+OS: darwin x64
+
+Angular: 12.2.12
+... animations, cli, common, compiler, compiler-cli, core, forms
+... platform-browser, platform-browser-dynamic, router
+
+Package                         Version
+---------------------------------------------------------
+@angular-devkit/architect       0.1202.12
+@angular-devkit/build-angular   12.2.12
+@angular-devkit/core            12.2.12
+@angular-devkit/schematics      12.2.12
+@schematics/angular             12.2.12
+rxjs                            6.6.7
+typescript                      4.3.5
+```
+
+
 See also:
-- [https://github.com/nvm-sh/nvm]
-- [https://angular.io/cli]
+- [nvm](https://github.com/nvm-sh/nvm)
+- [ng cli](https://angular.io/cli)
 
 ## Building
 
-To build/run in development:
+To build/run, in development:
 ```
 $ ng serve
 ```
