@@ -13,6 +13,9 @@ import { CleanseTitlesPipe } from './cleanseTitles.pipe';
 import { PostsComponent } from './posts/posts.component';
 import { CommentsComponent } from './comments/comments.component';
 
+import { LoadingDirective } from "./loading/loading-directive/loading.directive";
+import { LoadingSpinnerComponent } from "./loading/loading-spinner/loading-spinner.component";
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,7 +24,9 @@ import { CommentsComponent } from './comments/comments.component';
     GetFirstWordPipe,
     CleanseTitlesPipe,
     PostsComponent,
-    CommentsComponent
+    CommentsComponent,
+    LoadingSpinnerComponent, 
+    LoadingDirective
   ],
   imports: [
     BrowserModule,
