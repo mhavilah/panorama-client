@@ -1,13 +1,15 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { User } from './user';
-import { catchError, map, tap, first } from 'rxjs/operators';
+import { catchError, tap } from 'rxjs/operators';
 import { Observable, of } from 'rxjs';
+import { environment } from './../environments/environment';
 
 @Injectable({ providedIn: 'root' })
 export class UserService {
 
-  private userUrl = "/assets/usersposts.json"; // => api/users
+  // private userUrl = "/assets/usersposts.json"; // => api/users
+  private userUrl = environment.apiBaseUrl+"/usersAndPosts";
 
   httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })

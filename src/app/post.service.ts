@@ -3,13 +3,15 @@ import { Injectable } from '@angular/core';
 import { User } from './user';
 import { Post } from './post';
 import { UserPosts } from './userposts';
-import { catchError, map, tap, mergeMap, filter, first, toArray } from 'rxjs/operators';
+import { catchError, map, tap, mergeMap } from 'rxjs/operators';
 import { Observable, of } from 'rxjs';
+import { environment } from './../environments/environment';
 
 @Injectable({ providedIn: 'root' })
 export class PostService {
 
-  private postUrl = "/assets/usersposts.json"; // => api/users
+  // private postUrl = "/assets/usersposts.json"; // => api/users
+  private postUrl = environment.apiBaseUrl + "/usersAndPosts";
 
   httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })
