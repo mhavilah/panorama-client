@@ -1,4 +1,4 @@
-/* PostComponent's private CSS styles */
+/* UsersComponent's private CSS styles */
 
 // Common styles
 // https://css-tricks.com/centering-list-items-horizontally-slightly-trickier-than-you-might-think/ 
@@ -7,12 +7,12 @@
 	margin: 0 auto;
 }
 
-.posts {
+.comments {
   margin: 0 0 2em 0;
   list-style-type: none;
   padding: 0;
 }
-.posts li {
+.comments li {
   cursor: pointer;
   position: relative;
   left: 0;
@@ -23,51 +23,39 @@
   border-radius: 4px;
   display: block;
 }
-.posts li:hover {
-  color: #2c3a41;
-  background-color: #e6e6e6;
-  left: .1em;
-}
-.posts li.selected {
-  background-color: black;
-  color: white;
-}
-.posts li.selected:hover {
-  background-color: #505050;
-  color: white;
-}
-.posts li.selected:active {
-  background-color: black;
-  color: white;
+
+.comments .comment-name {
+    color: black;    
+    font-size: medium;
+    font-weight: bolder;
+    margin-left: 1em;
 }
 
-.posts .post-title {
-    color: blue;
-    width: 100%;
-    font-size: large;
-    padding: .1em;
-    display: inline-block;
+.comments .comment-email {
+    color: gray;
+    font-size: small;
+    font-weight: bold;
+    margin-left: 1em;
 }
 
-.posts .post-title:first-letter {
+.comments .comment-name:first-letter {
     text-transform: capitalize;
 }
 
-.posts .post-body {
+.comments .comment-body {
     display: table;
     color: gray;
     margin: 0 auto;
-    width: 100%;
     min-height: 4em;
     font-size: small;
-    padding: .1em;
+    margin-left: 1em;
 }
 
-.posts .post-body:first-letter {
+.comments .comment-body:first-letter {
     text-transform: capitalize;
 }
 
-.posts .badge {
+.comments .badge {
 //    display: none;
  display: inline-block;
   font-size: small;
@@ -83,6 +71,7 @@
   border-radius: 4px 0 0 4px;
 }
 
-input {
-  padding: .5rem;
+h5 {
+    font-size: medium;
+    margin-left: 1em;
 }

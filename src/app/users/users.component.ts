@@ -20,6 +20,10 @@ export class UsersComponent implements OnInit {
     this.getUsers();
   }  
 
+  ngOnDestroy() {
+    console.log("UsersComponent destroyed");
+  }
+
   getUsers(): void { 
     this.users$ = this.userService.getUsers();
   }

@@ -8,7 +8,6 @@ import { environment } from './../environments/environment';
 @Injectable({ providedIn: 'root' })
 export class UserService {
 
-  // private userUrl = "/assets/usersposts.json"; // => api/users
   private userUrl = environment.apiBaseUrl+"/usersAndPosts";
 
   httpOptions = {

@@ -11,6 +11,9 @@
                 <div style="width:20%;display:inline-block;">
                     <button (click)="showComments(post)" style="width:4em;height:4em;display:inline-block;">+</button>
                 </div>
+                <div *ngIf="post === selectedPost">
+                    <app-comments [post]="selectedPost"></app-comments>
+                </div>
             </li>
         </ul>
     </div>

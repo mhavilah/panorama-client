@@ -11,6 +11,7 @@ import { FetchJsonPipe } from './fetch-json.pipe';
 import { GetFirstWordPipe } from './firstWord.pipe';
 import { CleanseTitlesPipe } from './cleanseTitles.pipe';
 import { PostsComponent } from './posts/posts.component';
+import { CommentsComponent } from './comments/comments.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { PostsComponent } from './posts/posts.component';
     FetchJsonPipe,
     GetFirstWordPipe,
     CleanseTitlesPipe,
-    PostsComponent
+    PostsComponent,
+    CommentsComponent
   ],
   imports: [
     BrowserModule,

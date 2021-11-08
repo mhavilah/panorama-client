@@ -38,6 +38,10 @@ export class PostsComponent implements OnInit {
 
   }
 
+  ngOnDestroy() {
+    console.log("PostsComponent destroyed");
+  }
+
   getPosts(pageSize?: number): void {
     if (this.user) {
       console.log(`Getting ${pageSize??"all"} posts for user: ${this.user.name}`);
