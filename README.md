@@ -4,7 +4,7 @@ Matt Havilah
 November 2021
 (Updated build info - Nov 2026)
 
-An Angular 12 Javascript SPA application for the BT Panorama code test.
+An Angular 13 Javascript SPA application for the BT Panorama code test.
 
 ## Backend Project
 This client is used in conjunction with the usersAndPosts Java Spring Boot API server project.
@@ -39,8 +39,8 @@ $ nvm use 14
 Now using node v14.18.0 (npm v6.14.15)
 
 # Install the latest version of the Angular CLI
-# (This project currently uses the Angular v12 toolchain)
-$ npm install -g @angular/cli@v12-lts
+# (This project currently uses the Angular v13 toolchain)
+$ npm install -g @angular/cli@v13-lts
 
 # See also:
 # For release version tag names etc
@@ -64,24 +64,25 @@ $ ng --version
                 |___/
     
 
-Angular CLI: 12.2.12
-Node: 14.16.0
-Package Manager: npm 6.14.11
+Angular CLI: 13.3.11
+Node: 14.21.3
+Package Manager: npm 6.14.18
 OS: darwin x64
 
-Angular: 12.2.12
-... animations, cli, common, compiler, compiler-cli, core, forms
+Angular: 13.4.0
+... animations, common, compiler, compiler-cli, core, forms
 ... platform-browser, platform-browser-dynamic, router
 
 Package                         Version
 ---------------------------------------------------------
-@angular-devkit/architect       0.1202.12
-@angular-devkit/build-angular   12.2.12
-@angular-devkit/core            12.2.12
-@angular-devkit/schematics      12.2.12
-@schematics/angular             12.2.12
+@angular-devkit/architect       0.1303.11
+@angular-devkit/build-angular   13.3.11
+@angular-devkit/core            13.3.11
+@angular-devkit/schematics      13.3.11
+@angular/cli                    13.3.11
+@schematics/angular             13.3.11
 rxjs                            6.6.7
-typescript                      4.3.5
+typescript                      4.6.4
 ```
 
 
@@ -125,7 +126,7 @@ The Server makes downstream requests to the blog Users and Posts API and will re
 ----
 # Angular generated notes
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.12.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.11.
 
 ## Development server
 
