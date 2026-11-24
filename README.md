@@ -12,10 +12,12 @@ This client is used in conjunction with the usersAndPosts Java Spring Boot API s
 Visit:  [Panorama Server@Github](https://github.com/mhavilah/panorama-server)
 
 ## Prerequisites:
-- Node 14.x +
+- Node 16.x +
 - Angular-cli (ng tool)
 - nvm (optional)  
 - A modern browser (eg, [Chrome 95](https://www.google.com/intl/en_au/chrome/))
+
+
 
 ### Installation
 
@@ -24,19 +26,19 @@ On MacOS the following steps will setup the development toolchain:
 ```
 $ brew install nvm
 
-# Install managed nodeJS 14 or newer
+# Install managed nodeJS 16 or newer
 
-$ nvm use 14                     
-N/A: version "v14" is not yet installed.
+$ nvm use 16
+N/A: version "v16"  is not yet installed.
 
-You need to run `nvm install 14` to install and use it.
-$ nvm install 14   
-Downloading and installing node v14.21.3...
+You need to run `nvm install 16` to install and use it.
+$ nvm install 16
+Downloading and installing node v16.20.2...
 
 
 
-$ nvm use 14
-Now using node v14.18.0 (npm v6.14.15)
+$ nvm use 16
+Now using node v16.20.2 (npm v8.19.4)
 
 # Install the latest version of the Angular CLI
 # (This project currently uses the Angular v13 toolchain)
@@ -65,9 +67,9 @@ $ ng --version
     
 
 Angular CLI: 13.3.11
-Node: 14.21.3
-Package Manager: npm 6.14.18
-OS: darwin x64
+Node: 16.20.2
+Package Manager: npm 8.19.4
+OS: darwin arm64
 
 Angular: 13.4.0
 ... animations, common, compiler, compiler-cli, core, forms
@@ -90,10 +92,24 @@ See also:
 - [nvm](https://github.com/nvm-sh/nvm)
 - [ng cli](https://angular.io/cli)
 
+NB: On MacOS, NodeJS versions 16 and above are Apple Silicon only.
+MacOS 27 (Golden Gate) no longer supports Intell x64 binaries, previously emulated via Rosetta 2.
+
+Angular 13 supports Node 12.20, 14.15, and 16.10+
+
+### MacOS on Apple Silicon 
+
+To confirm a native Apple Silicon version of NodeJS try:
+```
+$ node -p process.arch
+arm64
+```
+
 ## Install Project Dependencies
 
 Before running the application its NodeJS dependencies must be downloaded
 ```
+$ rm -rf "node_modules"
 $ npm install
 # Download the world...
 ```
