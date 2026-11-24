@@ -2,6 +2,7 @@
 
 Matt Havilah
 November 2021
+(Updated build info - Nov 2026)
 
 An Angular 12 Javascript SPA application for the BT Panorama code test.
 
@@ -22,13 +23,32 @@ On MacOS the following steps will setup the development toolchain:
 
 ```
 $ brew install nvm
+
 # Install managed nodeJS 14 or newer
+
+$ nvm use 14                     
+N/A: version "v14" is not yet installed.
+
+You need to run `nvm install 14` to install and use it.
+$ nvm install 14   
+Downloading and installing node v14.21.3...
+
+
+
 $ nvm use 14
 Now using node v14.18.0 (npm v6.14.15)
-$ npm install -g @angular/cli
+
+# Install the latest version of the Angular CLI
+# (This project currently uses the Angular v12 toolchain)
+$ npm install -g @angular/cli@v12-lts
+
+# See also:
+# For release version tag names etc
+$ npm info @angular/cli
 ```
 
 Verfiy the installation:
+(Actual version numbers will vary for latest releases etc)
 ```
 $ npm --version
 6.14.11
@@ -68,6 +88,15 @@ typescript                      4.3.5
 See also:
 - [nvm](https://github.com/nvm-sh/nvm)
 - [ng cli](https://angular.io/cli)
+
+## Install Project Dependencies
+
+Before running the application its NodeJS dependencies must be downloaded
+```
+$ npm install
+# Download the world...
+```
+
 
 ## Building
 
